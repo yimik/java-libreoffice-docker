@@ -1,0 +1,5 @@
+FROM alpine:latest
+MAINTAINER Yimik <398075986@163.com>
+
+RUN apk update && apk add openjdk11 && apk add libreoffice && apk add ttf-dejavu && apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ADD fonts/* /usr/share/fonts/truetype/
